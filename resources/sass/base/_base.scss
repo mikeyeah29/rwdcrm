@@ -1,0 +1,48 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: $base__font-size;
+	line-height: ($base__line / $base__font-size);
+	font-family: $font-family--secondary;
+	background: $grey-light;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+hr {
+
+}
+
+nav {
+
+}
+
+ul {
+	li {
+
+	}
+}
+
+section {
+
+}
+
+form {
+
+}
+
+input {
+
+}
+
+textarea {
+
+}

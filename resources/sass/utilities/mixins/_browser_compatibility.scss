@@ -1,0 +1,100 @@
+/** BROWSER COMPATIBILTY **/
+
+@mixin calc($wh, $calc, $default: 100%){
+	@wh: $default;
+	@wh: -webkit-calc($calc);
+    @wh:    -moz-calc($calc);
+}
+
+@mixin transform($thing, $value, $important: 'no'){
+	@if $important == 'no' {
+		-webkit-transform: unquote("#{$thing}(#{$value})");
+			-ms-transform: unquote("#{$thing}(#{$value})");
+				transform: unquote("#{$thing}(#{$value})");	
+	}@else {
+		-webkit-transform: unquote("#{$thing}(#{$value}) !important");
+			-ms-transform: unquote("#{$thing}(#{$value}) !important");
+				transform: unquote("#{$thing}(#{$value}) !important");
+	}
+}
+
+@mixin box-shadow($value){
+	-webkit-box-shadow: $value;
+			box-shadow: $value;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};      
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&::-moz-placeholder {@content}
+	&:-ms-input-placeholder {@content}
+	&:-moz-placeholder {@content}
+}
+
+/** FLEX **/
+
+@mixin flex {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex_wrap($wrap) {
+	-webkit-flex-wrap: $wrap;
+        -ms-flex-wrap: $wrap;
+            flex-wrap: $wrap;
+}
+
+@mixin flex_basis($number){
+	-ms-flex-preferred-size: $number;
+        flex-basis: $number;
+}
+
+@mixin justify_content($value){
+	-webkit-justify-content: $value;
+	   -moz-justify-content: $value;
+	        justify-content: $value;
+}
+
+@mixin align_self($value){
+	-webkit-align-self: center; /* Safari 7.0+ */
+		    align-self: center;
+}
+
+@mixin align_items($value){
+	-webkit-box-align: $value;
+       -ms-flex-align: $value;
+          align-items: $value;
+}
+
+@mixin flex_direction($value){
+	-webkit-flex-direction: $value; /* Safari 6.1+ */
+	flex-direction: $value; 
+}

@@ -1,0 +1,38 @@
+.is-displayed {
+	display: block;
+	&-tablet {
+		@include mq(small){
+			display: block;
+		}
+		@include mq(tablet){
+			display: none;
+		}
+	}
+	&-desktop {
+		@include mq(small){
+			display: block;
+		}
+		@include mq(desktop){
+			display: none;
+		}
+	}
+}
+
+.is-displayed-mobile {
+	@include mq(small){
+		display: block;
+	}
+	@include mq(tablet){
+		display: none;
+	}
+}
+
+.is-hidden {
+	display: none;
+}
+
+.is-hidden-mobile {
+	@include mq(small, max){
+		display: none;
+	}
+}

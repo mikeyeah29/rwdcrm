@@ -1,0 +1,40 @@
+.form {
+
+	@extend %panel-default;
+
+	%inputstyles {
+		font-size: $font--sm;
+		background: $grey-medium;
+		border: solid 1px $grey-dark;
+		&:focus {
+			outline: none;
+			border: solid 1px $color-primary;
+		}
+	}
+
+	&__label {
+		display: block;
+	}
+
+	&__input-group {
+		margin-bottom: $space-sm;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__input {
+		@extend %inputstyles;
+		&[type="date"] {
+
+		}
+		&[type="number"] {
+			
+		}
+	}
+
+	&__textarea {
+		@extend %inputstyles;
+	}		
+
+}

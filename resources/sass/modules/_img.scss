@@ -1,0 +1,13 @@
+.img {
+
+	&--framed {
+		border: solid 1px $grey-medium;
+		padding: $space-sm;
+	}
+
+	&--avatar {
+		border-radius: 100%;
+		display: block;
+	}
+
+}

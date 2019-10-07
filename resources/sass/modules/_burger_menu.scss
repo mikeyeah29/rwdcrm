@@ -1,0 +1,11 @@
+.burger_menu {
+	width: 24px;
+	height: 20px;
+	div {
+		width: 100%;
+		background: $black;
+		height: 4px;
+		margin-bottom: 4px;
+		border-radius: 4px;
+	}
+}

@@ -1,0 +1,13 @@
+.error-box {
+	position: fixed;
+	width: 100%;
+	left: 0px;
+	bottom: 0px;
+	&__msg {
+		background: #a01f1f;
+		padding: 16px;
+		border-radius: 5px;
+		color: #fff;
+		margin-top: 24px;
+	}
+}

@@ -1,0 +1,15 @@
+.icon {
+	width: 16px;
+	height: 16px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	&-view {
+		background-image: url('../img/view.png');
+	}
+	&-edit {
+		background-image: url('../img/edit.png');
+	}
+	&-delete {
+		background-image: url('../img/delete.png');
+	}
+}

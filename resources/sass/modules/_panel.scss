@@ -1,0 +1,11 @@
+
+.panel {
+	
+	@extend %panel-default;
+
+	&--shadow {
+		@extend %panel-default;
+		box-shadow: 0px 2px 1px $grey-med-dark;
+	}
+
+}

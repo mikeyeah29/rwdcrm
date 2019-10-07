@@ -1,0 +1,18 @@
+@function percentage_of($value, $percent){
+	@return ( $value / 100 ) * $percent;
+}
+
+@function background_shade($color){
+	@return linear-gradient(darken($color, 25%), darken($color, 15%), $color);
+}
+
+@function em($target, $context: $base__font-size){
+	@return ($target / $context) * 1em;
+}
+
+// sets the context width for the grid
+
+@function g-context($g-col-width, $g-col-count, $g-gutter-width){
+	$g-context: ($g-col-width * $g-col-count) + ($g-col-width * ($g-col-count - 1));
+	@return $g-context;
+}

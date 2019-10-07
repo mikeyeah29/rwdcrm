@@ -1,0 +1,29 @@
+/*=====================
+// Placeholders
+*======================*/
+
+%clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+%pseudos {
+	display: block;
+	content: '';
+	position: absolute;
+}
+
+// Panels
+
+%panel-default {
+	padding: $space-sm;
+    border: solid 1px $grey-med-dark;
+    border-bottom: solid 3px $grey-med-dark;
+    border-radius: 3px;
+    background: #fff;
+    margin-bottom: $space-md;
+}
+

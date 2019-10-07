@@ -1,0 +1,78 @@
+// Font Stacks
+
+$font-url--google: 'https://fonts.googleapis.com/css?family=Lexend+Deca|Open+Sans&display=swap';
+
+$font-family--primary: 'Lexend Deca', sans-serif;
+$font-family--secondary: 'Open Sans', sans-serif;
+
+// Descriptive Base Colors
+
+$white: #fff;
+$black: #575858;
+$grey: #333;
+$marron: #71212d;
+$pinkish: #f4565d;
+
+$grey-light  : #fbfbfb;
+$grey-medium : darken($grey-light, 3%);
+$grey-med-dark: #dcdcdc;
+$grey-dark: #dedede;
+
+// Color Useage
+
+$color-primary   : $marron;
+$color-secondary : $pinkish;
+$color-accent    : complement($color-primary);
+$color-shadow    : rgba($black, 0.2);
+$color-border	 : #333;
+$color-error	 : $marron;
+
+// Spacing
+
+$space-xs: 8px;
+$space-sm: 16px;
+$space-md: 32px;
+$space-lg: 48px;
+$space-xl: 64px;
+$space-xxl: 80px;
+
+// Text
+
+$base__font-size : 16px;
+$base__line      : 24px;    
+
+$font--xs: 14px;
+$font--sm: 16px;
+$font--md: 20px;
+$font--lg: 32px;
+$font--xl: 48px;
+$font--xxl: 64px;
+
+// Breakpoints
+
+$small: 560px;
+$tablet: 768px;
+$desktop: 992px;
+$large: 1024px;
+$extra: 1200px;
+
+$path--rel: '../img';
+
+// Grid
+
+$g-col-width: 30px;
+$g-gutter-width: $space-md;
+$g-col-count: 12;
+$g-cont-max-w: 1050px;
+
+// Import Google Fonts
+
+@if variable-exists(font-url--google){
+	@import url($font-url--google);
+}
+
+
+
+
+
+

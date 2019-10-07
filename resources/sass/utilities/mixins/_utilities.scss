@@ -1,0 +1,90 @@
+@mixin ellipsis {
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin img-replace($img, $width, $height, $display: block ){
+	background-image: url('#{$path--rel}/#{$img}');
+	background-repeat: no-repeat;
+    background-position: center;
+	width: $width;
+	height: $height;
+	display: $display;
+}
+
+@mixin p-el(
+	$el,
+	$el-w: null,
+	$el-h: null){
+
+	@if $el == "before" or $el == "after" {
+		&:#{el}{
+			@extend %pseudos;
+			width: $el-w;
+			height: $el-h;
+			@content;
+		}
+	}@else {
+		@warn "`&:#{el}` is not a valid pseudo element.";
+	}
+}
+
+@mixin background($img, $size, $color: transparent, $pos: center){
+	background-image: url('#{$path--rel}/#{$img}');
+	background-size: $size;
+	background-color: $color;
+	background-repeat: no-repeat;
+    background-position: $pos;
+}
+
+@mixin doubly($margin: 1em){
+	& + & {
+		margin-left: $margin;
+		@content;
+	}
+}
+
+@mixin g-columns {
+	@for $i from 1 through $g-col-count {
+
+		$context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+		$target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+
+		// generate column modifier clasess
+
+		&--#{$i} {
+			width: percentage($target / $context);
+		}
+
+	}
+}
+
+@mixin mq($break, $minmax: min){
+
+	@if $minmax == min {
+		@media(min-width: $break){
+			@content;
+		}
+	}
+	@else {
+		@media(max-width: $break - 1px){
+			@content;
+		}
+	}
+
+}
+
+// BEM
+
+@mixin e($element){
+	&__#{$element} {
+		@content;
+	}
+}
+
+@mixin m($modifier){
+	&--#{$modifier} {
+		@content;
+	}
+}
