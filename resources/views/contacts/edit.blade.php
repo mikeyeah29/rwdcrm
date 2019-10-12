@@ -57,6 +57,7 @@
 								<option value="Marketing Agency" {{ $contact->industry == 'Marketing Agency' ? 'selected' : '' }}>Marketing Agency</option>
 								<option value="Holiday Park" {{ $contact->industry == 'Holiday Park' ? 'selected' : '' }}>Holiday Park</option>
 								<option value="Mechanic" {{ $contact->industry == 'Mechanic' ? 'selected' : '' }}>Mechanic</option>
+								<option value="Musician" {{ $contact->industry == 'Musician' ? 'selected' : '' }}>Musician</option>					
 								<option value="Retail" {{ $contact->industry == 'Retail' ? 'selected' : '' }}>Retail</option>
 								<option value="Photography" {{ $contact->industry == 'Photography' ? 'selected' : '' }}>Photography</option>
 								<option value="Take-a-way" {{ $contact->industry == 'Take-a-way' ? 'selected' : '' }}>Take-a-way</option>

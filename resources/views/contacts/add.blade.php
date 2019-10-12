@@ -56,6 +56,7 @@
 								<option value="Estate Agent">Estate Agent</option>
 								<option value="Holiday Park">Holiday Park</option>
 								<option value="Mechanic">Mechanic</option>
+								<option value="Musician">Musician</option>
 								<option value="Marketing Agency">Marketing Agency</option>
 								<option value="Retail">Retail</option>
 								<option value="Photography">Photography</option>
